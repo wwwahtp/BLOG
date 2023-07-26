@@ -1,0 +1,84 @@
+.markdown {
+  @apply break-words text-lg leading-relaxed;
+}
+
+.markdown p,
+.markdown ul,
+.markdown ol,
+.markdown blockquote {
+  @apply my-6;
+}
+
+.markdown p {
+  @apply leading-relaxed [&:not(:first-child)]:mt-6;
+}
+
+.markdown h2,
+.markdown h3,
+.markdown h4 {
+  @apply mt-12;
+}
+
+.markdown h2 {
+  @apply scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors;
+}
+
+.markdown h3 {
+  @apply scroll-m-20 text-2xl font-semibold tracking-tight;
+}
+
+.markdown h4 {
+  @apply scroll-m-20 text-xl font-semibold tracking-tight;
+}
+
+.markdown p:has(img) {
+  @apply flex w-full justify-center;
+}
+
+.markdown blockquote {
+  @apply border-l-2 pl-6 italic;
+}
+
+.markdown ul {
+  @apply my-6 ml-6 list-disc [&>li]:mt-2;
+}
+
+.markdown ul ul {
+  @apply my-2;
+}
+
+.markdown ol {
+  @apply my-6 ml-6 list-decimal [&>li]:mt-2;
+}
+
+.markdown ol ol {
+  @apply my-2;
+}
+
+.markdown a {
+  @apply font-semibold text-teal-600 hover:underline;
+}
+
+.markdown table {
+  @apply my-6 w-full overflow-y-auto;
+}
+
+.markdown table th {
+  @apply border px-4 py-2 text-left font-bold [&[align=center]]:text-center [&[align=right]]:text-right;
+}
+
+.markdown table td {
+  @apply border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right;
+}
+
+.markdown table tr {
+  @apply m-0 border-t p-0 even:bg-slate-100;
+}
+
+.markdown code {
+  @apply rounded text-sm;
+}
+
+.markdown *:not(pre) > code {
+  @apply relative rounded bg-slate-100 px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold;
+}
